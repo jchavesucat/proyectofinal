@@ -77,7 +77,7 @@ function promedio() {
 // Llama a la funcion que elimina el dato seleccionado por el usuario
 function elimina(id) {
   alert ("Entro a eliminar");
-  v.mostrarArray(est.delEst(".btnDelete"), $("#visor"))
-  $("#modalRegistros").modal();
-  v.limpiarContModal($("#modalRegistros"), $("#visor"));
+  // v.mostrarArray(est.delEst(".btnDelete"), $("#visor"))
+  // $("#modalRegistros").modal();
+  // v.limpiarContModal($("#modalRegistros"), $("#visor"));
 }
