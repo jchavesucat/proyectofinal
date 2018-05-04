@@ -1,5 +1,6 @@
 var estudiante;
 
+
 $(function () {
   estudiante = new Estudiante();
 	console.log("Usuario 1 creado: " + estudiante.setEst("345", "Ernesto Pérez Sandoval", 78));
@@ -13,7 +14,15 @@ $(function () {
   console.log("Obteniendo el listado de registros con nota mas baja: ");
   console.log(estudiante.getMin());
 	console.log("Eliminando usuario con el id 345: " + estudiante.delEst("345"));
-  console.log("Eliminando usuario con el id 345: " + estudiante.delEst("78"));
+  console.log("Eliminando usuario con el id 654: " + estudiante.delEst("654"));
   console.log ("Obteniendo el listado después de eliminar registros");
 	console.log(estudiante.getEst());
+
+  // Prueba de Rendimiento
+  for (var i = 0; i < 100; i++) {
+    estudiante.setEst(i, "Usuario de Prueba" + i, i);
+  }
+
+  console.log ("Obteniendo el listado de registros en el LocalStorage: ");
+  console.log(estudiante.getEst());
 });
